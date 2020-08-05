@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Jogszabalyok</xs:documentation>
+	</xs:annotation>
+
+	<xs:simpleType name="jogszabaly_tipus" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="torveny" />
+			<xs:enumeration value="kormany_rendelet" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kibocsato_kod" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1" />
+			<xs:enumeration value="2" />
+</xs:restriction>
+</xs:simpleType>
+
+	<xs:complexType name="jogszabaly">
+		<xs:sequence>
+			<xs:annotation>
+				<xs:documentation>Proba</xs:documentation>
+			</xs:annotation>
+
+
+			<xs:element name="KibocsatoKod" type="kibocsato_kod">
+				<xs:annotation>
+					<xs:documentation>Kibocsato kodja</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="JogszabalyTipus" type="jogszabaly_tipus">
+				<xs:annotation>
+					<xs:documentation>Jogszabaly tipusa</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="szoveg" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,13 @@
+<jxb:bindings 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    version="2.1">
+	<jxb:bindings schemaLocation="dummy2.xsd">
+		<jxb:bindings node="//xs:simpleType[@name='kibocsato_kod']/xs:restriction/xs:enumeration[@value='1']">
+			<jxb:typesafeEnumMember name="EGY"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:simpleType[@name='kibocsato_kod']/xs:restriction/xs:enumeration[@value='2']">
+			<jxb:typesafeEnumMember name="KETTO"/>
+		</jxb:bindings>
+	</jxb:bindings>
+</jxb:bindings>
